@@ -1,5 +1,6 @@
 package dev.fr.diginamic;
 
+import com.github.lalyos.jfiglet.FigletFont;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
@@ -11,5 +12,12 @@ public class App {
 
     public static void main(String[] args) {
      LOGGER.info("Bonjour !");
+        try {
+            String asciiArt = FigletFont.convertOneLine("Maven !");
+            System.out.println(asciiArt);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
